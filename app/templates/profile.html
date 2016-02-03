@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+
+{% block css %}<style type="text/css">
+    .infobox{
+        width: 320px;
+        padding: 10px;
+        border: 2px solid black;
+        margin: 1px;
+    }
+    #name{
+        margin-bottom: 40px;
+    }
+    #profile_pic, #data_div{
+        float: left;
+        width: 333px;
+        margin: 20px;
+    }
+    #profile_pic{
+        width: 200px;
+    }
+</style>
+{% endblock %}
+
+{% block js %}
+{% endblock %}
+
+{% block main %}
+<div id="profile_pic">
+    <img src="/static/img/octocat.png" alt="Profile Picture" width="200px" height="200px">
+</div>
+<div id="data_div">
+    <div id="name" class="infobox">
+        Toni-Ann Fitzgerald
+    </div>
+    <div id="time" class="infobox">
+        Today is: {{ time }}
+    </div>
+    <div id="profile_info" class="infobox">
+        <p>Username: tonitiffy <br>ID: 620065822 <br>Sex: Female <br> Age: 21 <br>Highest Score: 120 <br>TDollars: 200</p>
+    </div>
+</div>
+{% endblock %}
