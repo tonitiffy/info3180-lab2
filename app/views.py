@@ -25,12 +25,13 @@ def about():
     """Render the website's about page."""
     return render_template('about.html')
     
-@app.route('/profile/')
+@app.route('/profile')
 def profile():
     """Render the profile page."""
-    def timeinfo():
-        return time.strftime("%a, %d %b %Y")
     return render_template('profile.html', time=timeinfo())
+    
+def timeinfo():
+    return time.strftime("%a, %d %b %Y")
 
 
 ###
